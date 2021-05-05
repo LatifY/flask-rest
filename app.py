@@ -19,10 +19,12 @@ ma = Marshmallow(app) #Initialize Marshmallow
 
 from blueprints.product import product
 from blueprints.category import category
+from blueprints.user import user
 
 # register blueprints
 app.register_blueprint(product, url_prefix="/api/product")
 app.register_blueprint(category, url_prefix="/api/category")
+app.register_blueprint(user, url_prefix="/api/user")
 
 if __name__ == "__main__":
     app.run(debug=True)
